@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Erica's Homepage - General Information</title>
+    <link rel="stylesheet" href="stylesheets/default.css" />
+</head>
+
+<script type="text/javascript">
+<!--
+var timeout = 500;
+var closetimer= 0;
+var ddmenuitem = 0;
+// open hidden layer
+function mopen(id)
+{	
+	// cancel close timer
+	mcancelclosetime();
+
+	// close old layer
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+	// get new layer and show it
+	ddmenuitem = document.getElementById(id);
+	ddmenuitem.style.visibility = 'visible';
+
+}
+// close showed layer
+function mclose()
+{
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function mclosetime()
+{
+	closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+	if(closetimer)
+	{
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+
+// close layer when click-out
+document.onclick = mclose; 
+// -->
+</script>
+
+<body>
+    <section id="mainRight" class="clear">
+         <header>
+				<h1>Erica Dongjie Zhu</h1>
+        </header>
+		   
+        <nav id="sddm"> 
+			<ul>
+                <li><a href="index.html">Home</a></li>
+			<li><a href="GeneralInformation.html" onmouseover="mopen('m1')" onmouseout="mclosetime()" class="selected">About Me</a>
+						<div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+							<a href="GeneralInformation.html" class="selected">General Information</a>
+							<a href="Activities.html">Activities</a>
+						</div>
+			</li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul >
+        </nav >
+
+        <section class="columns clear">
+			<div class="colMid">
+				<h5>General information</h5>
+				<p><strong>School: </strong>University of California, Berkeley</p>
+				<p style="text-indent:4.5em">Double major in Computer Science and Economics </p >
+			</div  >
+			
+			<hr/>
+			
+			<div class="colMid">
+				<p><strong>Languages: </strong></p>
+			</div>
+			
+			<div class="colLeft">
+				<ul>
+					<li>English</li>
+					<li>Mandarin</li>
+					<li>Cantonese</li>
+					<li>Japanese</li>
+				</ul>
+			</div >
+			
+			<div class="colRight">
+				<ul>
+					<li>C, JAVA, PYTHON</li>
+					<li>Scheme, MIPS</li>
+					<li>HTML, C++, JavaScript</li>
+				</ul>
+			</div>
+			
+			<hr/>
+			
+			<div class="colMid">
+				<p><strong>Courses: </strong></p>
+			</div>
+			<div class="colRight">
+				<ul>
+					<li>Math1A, 1B -- Calculus</li>
+					<li>Econ1 -- Intro to Economics</li>
+					<li>Stat20 -- Intro to Statistics</li>
+					<li>Econ100A -- Microeconomics</li>
+					<li>Econ100B -- Macroeconomics</li>
+					<li>UGBA103 -- Introduction to Finance</li>
+				</ul>
+			</div >
+			
+			<div class="colLeft">
+				<ul>
+					<li>Math54 -- Linear Algebra and Differentiate Equation</li>
+					<li>CS61A -- Structure and Interpretation of Computer Programs</li>
+					<li>CS61B -- Data Structures and Advanced Programming</li>
+					<li>CS61C -- Machine Structures</li>
+					<li>CS70 -- Discrete Mathematics and Probability Theory</li>
+					<li>CS170 -- Efficient Algorithms and Intractable Problems</li>
+					<li>CS188 -- Introduction to Artificial Intelligence</li>
+				</ul>
+			</div>
+		    
+			</section>
+
+ 		<!-- end columns -->
+	<section>
+        <footer>
+            <p>&copy; 2014 Erica the Coder. All rights reserved.</p>
+        </footer>
+    </section>
+    <!-- end mainRight -->
+</body>
+</html>
+
+

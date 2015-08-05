@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Erica's HomePage - Contact</title>
+    <link rel="stylesheet" href="stylesheets/default.css" />
+</head>
+
+<script type="text/javascript">
+<!--
+var timeout = 500;
+var closetimer= 0;
+var ddmenuitem = 0;
+// open hidden layer
+function mopen(id)
+{	
+	// cancel close timer
+	mcancelclosetime();
+
+	// close old layer
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+	// get new layer and show it
+	ddmenuitem = document.getElementById(id);
+	ddmenuitem.style.visibility = 'visible';
+
+}
+// close showed layer
+function mclose()
+{
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function mclosetime()
+{
+	closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+	if(closetimer)
+	{
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+
+// close layer when click-out
+document.onclick = mclose; 
+// -->
+</script>
+
+<body>
+    <section id="mainRight">
+        <header>
+				<h1>Erica Dongjie Zhu</h1>
+        </header>
+		
+		<! -- Navigation bar --!>
+        <nav id="sddm"> 
+			<ul>
+                <li><a href="index.html">Home</a></li>
+			<li><a href="GeneralInformation.html" onmouseover="mopen('m1')" onmouseout="mclosetime()">About Me</a>
+						<div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+							<a href="GeneralInformation.html">General Information</a>
+							<a href="Activities.html">Activities</a>
+						</div>
+			</li>
+                <li><a href="contact.html" class="selected">Contact</a></li>
+            </ul >
+        </nav >
+
+        <section class="columns clear">					
+            	<div class="colLeft">
+			    <br><br>
+				<h4>Contact Me</h4>
+				<p>
+					<br>phone: (510) 258 - 2317</br>
+					<br>email: </br> 
+					<br>dongjiezhu@berkeley.edu</br>
+					<br>dongjiezhu1994@hotmail.com</br>
+				</p>
+			  	</div>
+            <div class="colwide">
+			  <br><br>
+				<h4><b>Social Media</b></h4>
+					<a href="www.facebook.com/erica.zhu.31">
+						<img alt="facebook" style="width:30px; height:30px; border:0" src = "images/facebook.png">
+					</a>
+					<a href="instagram.com/erica_jie/">
+						<img alt="instagram" style="width:30px; height:30px; border:0" src ="images/instagram.png">
+					</a>
+					<a href="www.linkedin.com/in/ericazhu/">
+						<img alt="linkedin" style="width:30px; height:30px; border:0" src = "images/linkedin.png">
+					</a>
+			</div>
+		  </section>
+ 		<!-- end columns -->
+        <footer>
+            <p>&copy; Erica the Coder. All rights reserved.</p>
+        </footer>
+    </section>
+    <!-- end mainRight -->
+</body>
+</html>
+

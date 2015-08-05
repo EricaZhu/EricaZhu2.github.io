@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Erica's Homepage - Home</title>
+    <link rel="stylesheet" href="stylesheets/default.css" />
+</head>
+
+<script type="text/javascript">
+<!--
+var timeout = 500;
+var closetimer= 0;
+var ddmenuitem = 0;
+// open hidden layer
+function mopen(id)
+{	
+	// cancel close timer
+	mcancelclosetime();
+
+	// close old layer
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+	// get new layer and show it
+	ddmenuitem = document.getElementById(id);
+	ddmenuitem.style.visibility = 'visible';
+
+}
+// close showed layer
+function mclose()
+{
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function mclosetime()
+{
+	closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+	if(closetimer)
+	{
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+
+// close layer when click-out
+document.onclick = mclose; 
+// -->
+</script>
+
+<body>
+	<section id="mainRight">
+		<header>
+				<h1>Erica Dongjie Zhu</h1>
+		</header>
+        <nav id="sddm"> 
+			<ul>
+                <li><a href="index.html" class="selected">Home</a></li>
+			<li><a href="GeneralInformation.html" onmouseover="mopen('m1')" onmouseout="mclosetime()">About Me</a>
+						<div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+							<a href="GeneralInformation.html">General Information</a>
+							<a href="Activities.html">Activities</a>
+						</div>
+			</li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul >
+        </nav >
+		<section class="columns clear">
+            <div class="colLeft">
+				  <p><img style="width:200px; height:200px; border0"src="images/LINKEDINPRO.jpg"/></p>
+                <p>My name is Dongjie Zhu. I am a Junior student from UC Berkeley. My major is computer science and Economics. &nbsp;<br></p>	
+			</div> 
+			
+			<div class="colRight">
+                <p>My Focus</p>
+				<ul>
+					<li>Economics</li>
+						<p>My focus is on consulting and finance. I have done research about marketing. I am active in many business clubs and I am the vice president of Consulting Club at Berkeley.</p>
+					<li>Computer science</li>
+						<p>I started programming since I got in college. I have programmed in Python, Java, C, CSS, HTML and Javascript. I am a quick learner and a passionate programmer.</p>
+				</ul>
+            </div>
+        </section>
+        <!-- end columns -->
+        <footer>
+            <p>&copy; 2014 Erica the Coder. All rights reserved.</p>
+        </footer>
+    </section>
+		<!-- end mainRight -->
+</body>
+</html>
+
+
