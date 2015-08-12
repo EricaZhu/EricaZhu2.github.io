@@ -49,6 +49,21 @@ function mcancelclosetime()
 // close layer when click-out
 document.onclick = mclose; 
 // -->
+
+function change(id) {
+	var div_li = document.getElementById(id);
+	if (div_li.style.visibility=="hidden") {
+		div_li = document.getElementById(id);
+		div_li.style.visibility = 'visible';
+		/*if(id=="content") {
+			var div2 = document.getElementById('content2');
+			div2.style.visibility='hidden';
+		}else{
+			var div2 = document.getElementById('content');
+			div2.style.visibility='hidden';
+		}*/
+	}
+}
 </script>
 
 <body>
@@ -60,7 +75,7 @@ document.onclick = mclose;
         <nav id="sddm"> 
 			<ul>
                 <li><a href="index.html">Home</a></li>
-			<li><a href="GeneralInformation.html" onmouseover="mopen('m1')" onmouseout="mclosetime()" class="selected">About Me</a>
+				  <li><a href="GeneralInformation.html" onmouseover="mopen('m1')" onmouseout="mclosetime()" class="selected">About Me</a>
 						<div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
 							<a href="GeneralInformation.html">General Information</a>
 							<a href="Activities.html" class="selected">Activities</a>
@@ -72,11 +87,79 @@ document.onclick = mclose;
 
         <section class="columns clear">
 			
+		<nav id="act">
+			<ul>
+				<li><a href="#P1">Internship</a></li>
+				<li><a href="#P2">Club Activities</a></li>
+				<li><a href="#P3">Projects</a></li>
+			</ul>
+		</nav>
 			
-			<div class="colMid">
-				<h5>Activities</h5>
-			</div >
+		<div class="acti">
+			<h3><a name="P1">Intenship</a></h3>
+				<dl>
+					<dt>Credit Department Intern at China Citic Bank</dt>
+						<dd>
+							Sorted out the financial information of firms in bank credit management system; <br>
+							Learnt about corporate banking and credit business; <br>
+							Processed the basic information of giving-credit customers and financial advisors service program using MS Word and MS Excel <br>
+						    <hr>
+						</dd>
+					<dt>Financial Planning Intern at Guangdong Dowin Investment Management Co.,Ltd, 
+						<dd>
+						Attended training sessions and learnt about Chinese market and financial strategies <br>
+						Prepared materials for weekly staff meetings and gave a presentation on Chinese independent wealth management market <br>
+						Assisted to hold three weekly cash flow board game events and a lecture about financial planning for clients <br>
+						<hr>
+						</dd>
+					</dt>
+					<dt>Technology Department Intern at Ever Flourish Technology Co.,Ltd
+						<dd>
+							Examined and analyzed the statistics of feedback from different schools <br>
+							Received company's technical training and learnt about basic knowledge of computer and related math <br>
+							<hr>
+						</dd>
+					</dt>
+				</dl>
 			
+			<h3><a name="P2">Club Activities</a></h3>
+				<dl>
+					<dt>Vice President at Consulting Club at Berkeley
+						<dd>
+							Help to create the website of Consulting Club at Berkeley, maintain the website and update the latest news and events on the website <br>
+							Reach out to consulting firms and invite professionals to the workshops and panels <br>
+							Research and establish internal mentorship program in which upperclassmen members mentor new members <br>
+							<hr>
+						</dd>
+					</dt>
+					<dt>Student Outreach Coordinator at ASUC(Associated Students of the University of California)
+						<dd>
+							Coordinate with other departments for setting up the new ASUC website and updating ASUC&rsquo;s new projects<br>
+							Collaborate with Cal Student Orientation office for setting up the ASUC tabling events and communicating details to the staffs <br>
+							Assist to organize and facilitate the ASUC executive tabling event and glass boxes project, which help promote the image of ASUC to students <br>
+							<hr>
+						</dd>
+					</dt>
+					<dt> more to come..
+						<dd>
+							updating
+						</dd>
+					</dt>
+				</dl>
+				
+				<h3><a name="P3">Projects</a></h3>
+					<dl>
+						<dt> updating
+							<dd></dd>
+						</dt>
+					</dl>
+		</div>
+		
+
+			
+			
+			
+			<!-- old test version
 			<div class="colRight">
 				<h3 onmouseover="mopen('m3')" onmouseout="mclosetime()">Past Activities</h3>
 			</div>
@@ -97,7 +180,9 @@ document.onclick = mclose;
 					</ul>
 				</div>
 			</div>
-			</div>
+			</div> -->
+			
+
 
 			
 
