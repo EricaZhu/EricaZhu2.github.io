@@ -4,19 +4,10 @@ body {
 
 
 /* tells browsers that don't read html 5 tags to render like divs */
-header, footer, nav{
+/*header, footer, nav{
 	display: block;
 	margin: 0;
 	padding: 0;
-}
-
-/* clears containers with floated elements, no need for extra markup! */
-.clear:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
 }
 
 /* Type
@@ -38,14 +29,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-family: Fantasy, 'Rye', cursive;
+	font-family: Fantasy, serif,'Rye', cursive;
 	padding-top: 80px;
 	margin:0;
 }
 
-header h1 {
-	padding-top: 50px;
-}
 
 h2 {
 	font-family: Fantasy, 'Rye', cursive;
@@ -83,6 +71,8 @@ p {
 	font-size: 15px;
 	line-height: 1.5em;
 	text-align: left;
+	margin-right: 10px;
+	padding: 5px 2.08333%;
 }
 
 p img {
@@ -120,11 +110,6 @@ hr {
 	border-top-width: 1px;
 	clear: both;
 	height: 0;
-}
-
-p {
-	margin-right: 10px;
-	padding: 5px 2.08333%;
 }
 
 blockquote {
@@ -171,15 +156,16 @@ header {
 	background: url(../images/woodBackground);
     width: 100%;
 	border: none;
-   
+	text-align:center;
+	padding:10px 0;
 }
 
 header h1 {
-	color: #333;
+	color: #505050;
 	font-size: 1.6em;
 	text-align: center;
 	border: none;
-    
+	padding-top: 50px;
 }
 
 
@@ -191,6 +177,13 @@ header h1 {
 	width: auto !important;
 }
 
+nav {
+	height: 60px;
+	width: 960px;
+	margin-left: -10px;
+	line-height:50px;
+	position: relative; 
+}
 
 nav ul li a {
 	margin: 10px;
@@ -227,6 +220,9 @@ nav ul li a.selected:hover {
 	color: #FFF !important;
 }
 
+.fixed{
+	position: fixed;
+}
 
 #mainRight {
     background: url(../images/background2.png) repeat;
@@ -257,22 +253,18 @@ nav ul li a.selected:hover {
 	border: none;
     padding-left:4%;
 }
-
 .colthin {
 	float: left;
 	width: 250px;
 	border: none;
     padding-left:2.0%;
 }
-
 .colwide {
 	float: right;
 	width: 43..75%;
 	border: none;
     padding-right:2.08333333%;
 }
-
-
 .colRight {
 	float: right;
 	width: 46.875%;
@@ -301,7 +293,6 @@ footer {
     height: 30px;
 	padding-top: 9px;
 }
-
 footer p {
 	float: left;
     margin-left: 3.125%;
@@ -309,32 +300,6 @@ footer p {
  	font-size: 0.8em;
     color: #FFFFFF;
 	border: none;
-}
-
-{	
-	nav ul li {
-		display:block;
-		text-align: center;
-		margin: 0;
-	}
-	nav ul li a {
-		width: 10%;
-	}
-	
-	footer {
-		height: inherit;
-	}
-	footer p {
-		float: none;
-		text-align: center;
-		font-size: 1.2em;
-	}
-	footer ul {
-		float: none;
-		width: 100%;
-		text-align: center;
-		margin: 10px 0;
-	}
 }
 
 
@@ -349,8 +314,8 @@ footer p {
 	height: 40px;
 	margin: 0 auto;
 	display: block;
+	position: relative;
 }
-
 #sddm ul{
 	/*background-color:#808080;
 	border: 2px solid #909090;
@@ -369,7 +334,6 @@ footer p {
 	position: absolute;
 	left: 40%;
 }
-	
 #sddm ul li {	
 	font: bold 12px arial;
 	border:none;
@@ -378,25 +342,14 @@ footer p {
 	float: left;
 	text-align: center;
 }
-
 #sddm ul li a{	
 	display: block;
 	padding: 5px 5px 5px 5px;
 }
-
-	/*: 8px 1px 0 0;
-	padding: 4px 10px;
-	width: 60px;
-	background: #808080;
-	color: #FFF;
-	text-align: center;
-	text-decoration: none;*/
-
 #sddm ul li a:hover{	
 	background: rgba(0, 0, 0, 0.3);
 	padding: 5px, 8px;
 }
-
 #sddm ul div {	
 	position: absolute;
 	visibility: hidden;
@@ -404,7 +357,6 @@ footer p {
 	background: #EAEBD8;
 	/*border: 1px solid #5970B2*/
 }
-	
 #sddm ul div a {	
 	position: relative;
 	display: block;
@@ -418,7 +370,6 @@ footer p {
 	color: #2875DE;
 	font: 12px arial
 }
-
 #sddm ul div a:hover {	
 	background: #505050;
 	color: #FFF
